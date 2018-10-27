@@ -16,6 +16,7 @@ export default class Map extends React.Component<MapProps, MapState> {
 
     constructor(props: MapProps) {
         super(props);
+        console.log('git test');
     }
 
     render() {
