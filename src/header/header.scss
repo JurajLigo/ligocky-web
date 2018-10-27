@@ -1,0 +1,149 @@
+@import "./../constants";
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: .5rem;
+  transition: top .5s,box-shadow 1s, background 1s;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+
+  @media screen and (max-width: 768px) { 
+    
+    justify-content: space-between;
+    background: none;
+  }
+
+  &__wrapper {
+    height: 75px;
+  }
+
+  &--init {
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  }
+
+  &--show {
+    top: 0;
+    width: 100%;
+    background: $blue;
+    box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,.3);
+  }
+
+  &--hide {
+    width: 100%;
+    box-sizing: border-box;
+    top: -7.8rem;
+  }
+  
+  &__firstname {
+      color: white;
+  }
+
+  &__lastname {
+      color: $blue;
+  }
+  
+  &__nav-desktop {
+    font-size: 1rem;
+    margin-right:2rem;
+    
+    li {
+      display: inline-block;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+
+  
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__link {
+
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    
+      &--blue {
+        color: white;
+      }
+  }
+
+  &__nav-mobile {
+    z-index: 2;
+
+    @media screen and (min-width: 769px) {
+      display: none;
+    }
+  }
+
+  &__mobile-menu {
+    width: 100%;
+    background: $blue;
+    position:absolute;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    transition: right .7s;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+      ul {
+        top: 30%; 
+        position: relative;
+        list-style-type: none;
+        text-align: center;
+        padding: 0;
+        margin: 0 auto;
+        width: 80%;
+      }
+
+      .record {
+        padding-top: 2rem;  
+        padding-bottom: 2rem;
+        border-top: 1px solid white; 
+
+        &--last {
+          border-bottom: 1px solid white;
+        }
+      }
+
+      .m-right {
+        margin-right: 1.2rem;
+      }
+
+      a {
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+  
+        &:hover {
+          color: $blue;
+        }
+      }
+
+  }
+
+
+  &__flag {
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-right: 4px;
+    border-radius: 15px;
+    opacity: 1;
+  }
+}

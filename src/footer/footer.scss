@@ -1,0 +1,27 @@
+@import "./../constants";
+
+.footer {
+  background-color: $blue;
+  padding: 1rem;
+
+  &__social {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: $gray;
+
+    .m-right {
+      margin-right: 1.4rem;
+
+      &:hover {
+        color: $blue;
+      }
+
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: .9rem;
+    color: white;
+  }
+}

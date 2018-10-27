@@ -1,0 +1,50 @@
+[
+    {
+        "description": "Po jemnom preskúmaní hlavného námestia v centre Santa Clary sme si všimli, že na okraji je jedna reštaurácia pred ktorou stojí v rade strašne veľa miestnych. Pohľadmi sme teda preskúmali vzhľad reštaurácie a keďže sme nemali čas čakať rozhodli sme sa, že si urobíme rezerváciu na večeru.",
+        "time": "13:30"
+    },
+    {
+        "description": "Zastavujeme pri recepčnej knihe pri vstupe do reštaurácie a oslovujeme čašníčku, čí si môžme urobiť na večer rezerváciu. Lamavou španielčinou jej hovorím, že to bude na meno Juro a pre tri osoby. Nevie to moc zapísať píše to Churo, tak svoje meno opakujem. Druhykrát to píše ako Luro :) Tretikrát to dáva už mne napísať tak tam píšem tretiu verziu už v korektnej podobe. Overujeme si ešte, či je všetko v poriadku, nakoľko v v knihe je iba trikrát zapísané Juro v rôznych verziach a žiadna zmienka o čase alebo počte osôb. Čašníčka však tvrdí, že všetko je OK a tak sa tešíme na večer :)",
+        "time": "13:35"
+    },
+    {
+        "description": "Latka kvality jedla na Kube je nastavená veľmi nízko, kedže nemajú ani základné suroviny. Pizzu sme zatiaľ videli len s s divnou šunkou pripominajúcu lanšmít a syrom, ostatné ingrediencie ako olivy, kukurica, šampióny sú zriedkavým úkazom a zbožným prianím. Zažili sme už aj prekvapenie v podobe pizze s horčicou v Trinidade a salámu sme videli zatial len raz vo Vinales a bola súčasť sendviču. O to viac sme zvedaví čo nás čaká večer. Objednávame si starú ladu za 1 USD a ideme pozrieť Che Guevarovo mauzóleum a večer navštívime reštauráciu La Toscana.",
+        "time": "13:36"
+    },
+    {
+        "description": "Odchádzame z hotela a hladní sa vydávame smerom k reštaurácii. Už zdiaľky opäť vidíme kopec ľudí čakajúcich pred vchodom. Keďže máme rezerváciu rozhodneme sa ísť dopredu a spýtať sa, či majú pre nás stôl. Kúbanci čakajúci v rade na nás čudne zazerajú, že čo sa predbiehame ale tak rezerváciu si mohli aj oni urobiť, teda ak rezerváciu neumožňujú iba turistom. Oznamujeme čašníčke (iná ako bola doobeda), že máme rezerváciu, ona pozerá do knihy a ma pre nás pripravený stôl pre troch. Nevieme ako to vydedukovala z troch zápiskov Juro ale budiš máme stôl.",
+        "time": "20:00"
+    },
+    {
+        "description": "Prechádzame ponurým interiérom La Toscany a sadáme si za náš stôl. Cestou sme si všimli jedlá a nevyzerali moc vábne. Pozeráme si jedálný lístok. Jedálne lístky na Kube su dosť smiešne. Buď su bez napádu a grafiky a čisto čiernobiele alebo su plné farieb, 3D písma a vyzerajú gýčovo. Tento jedálny lístok je čiernobiely a na výber nie je moc veľa jedál.Na Slovensku by to bolo dobré znamenia, že reštaurácia sa snaží variť z čerstvých surovín a nie mrazených.",
+        "time": "20:05",
+        "imagePath": "../../assets/travelStory/santa_clara/interior.jpg",
+        "imageCaption": "Interiér reštaurácie"
+    },
+    {
+        "description": "Po naštudovaní lístku sa chalani rozhodli, že si dajú cestoviny s kuracím mäsom a syrovou omáčkou a ja si dávam Lasagne Prichádza čašníčka, objednávame si jedlá a ako nápoj si volíme Cuba Libre.",
+        "time": "20:15"
+    },
+    {
+        "description": "Chalanom príchádzajú cestoviny ale nadšenie strieda zdesenie. Cestoviny vyzerajú ako instantné cestoviny z nejakého kelínka. S nevôlou sa púštajú do jedla. Nemajú žiadnu chuť, syr divný, ktorý davajú všade, štyri až päť kúskov mäsa a niečo červené ale kečup to nie je. Táto delikatesa stojí 5 CUC, čo je 5 dolárov.",
+        "time": "20:25",
+        "imagePath": "../../assets/travelStory/santa_clara/pasta.jpg",
+        "imageCaption": "Veľkolepé cestoviny s nulovou chuťou za 5 dolárov"
+    },
+    {
+        "description": "O päť minút už aj mne prichádza jedlo. Látku mám nastavenú nízko ale aj tak som nepríjemne prekvapený. Najprv som si myslel, že to je niečo sladké ale nie je to slané :) Chutí to ako neochotuná krupicová kaša ktorá je namiesto cesta. Mäso tam nie je, nieto ešte bašamel :) Paradajková omáčka taktiež dochybuje, ale je tam niečo červené a chutí to ako voda ktorá sa usadí na vrchu kečupu keď sa dá do chladničky. Syr mám taký istý ako chalani.",
+        "time": "20:30",
+        "imagePath": "../../assets/travelStory/santa_clara/lasagne.jpg",
+        "imageCaption": "Pochúťka v podobe lasagni"
+    },
+    {
+        "description": "Čašníška ešte chodí hore dole, či je všetko v poriadku, ale čo jej poviem, že to nie sú lasagne :) V podstate kuchár nikdy nevidel ako majú vyzerať lasagne a nemá ani suroviny a plat 20 dolárov na mesiac nepôsobý moc motivačne, čiže ťažko ho viniť z tohto nepodarku.",
+        "time": "20:40"
+    },
+    {
+        "description": "Pýtame si účet a hladní opúšťame reštauáciu",
+        "time": "20:45",
+        "imagePath": "../../assets/travelStory/santa_clara/bill.jpg",
+        "imageCaption": "Kubánský účet"
+    }
+]

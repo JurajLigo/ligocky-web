@@ -1,0 +1,68 @@
+@import "./../constants";
+
+.carousel {
+  //border-bottom: .1rem solid white;
+  border: none !important; 
+
+  &__wrapper {
+    position: relative;  
+  }
+  
+  &__item {
+    height: 100vh;
+    width: 100%;
+    position: relative;  
+    background: no-repeat center center scroll;
+    background-size: cover;
+    margin: 0 auto;
+  }
+
+  &__description {
+    position: absolute;
+    text-align: left;
+    bottom: .7rem;
+    right: 1rem;
+    color: white;
+    font-size: 1.1rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: .8rem;
+    }
+  }
+
+  &__order {
+    position: absolute;
+    bottom: .7rem;
+    left: 1rem;
+    color: white;
+    font-size: 1.1rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: .8rem;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 2;
+
+    @media screen and (max-width: 768px) {
+      font-size: .7rem;
+    }
+    
+    &--left {
+      transform: translate(50%, -50%);
+      left: 1rem;
+    }
+
+    &--right {
+      transform: translate(-50%, -50%);
+      right: 1rem;
+    }
+
+  }
+}
