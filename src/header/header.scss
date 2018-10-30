@@ -10,7 +10,7 @@
   padding: .5rem;
   transition: top .5s,box-shadow 1s, background 1s;
   z-index: 2;
-  position: fixed;
+  position: absolute;
   width: 100%;
 
   @media screen and (max-width: 768px) { 
@@ -26,12 +26,15 @@
   &--init {
   background: rgba(0, 0, 0, 0.3);
   top: 0;
+  position: fixed;
+  width: 100%;
   }
 
   &--show {
     top: 0;
-    width: 100%;
     background: $blue;
+    position: fixed;
+    width: 100%;
     box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,.3);
   }
 
@@ -39,6 +42,7 @@
     width: 100%;
     box-sizing: border-box;
     top: -7.8rem;
+    position: fixed;
   }
   
   &__firstname {

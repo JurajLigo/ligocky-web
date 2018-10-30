@@ -40,12 +40,12 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     scrollHandle = () => {
         // ked chcem poriesit prechod z init do hide a naraz to zmizne tak potom cez opacity
 
-        if (window.scrollY <= 78) {
+        if (window.scrollY <= 0) {
             this.setState({ scrollY: window.scrollY, headerState: HeaderScroll.INIT })
             return;
         }
 
-        if (window.scrollY > this.state.scrollY && window.scrollY > 78) {
+        if (window.scrollY > this.state.scrollY && window.scrollY > 77) {
             this.setState({ scrollY: window.scrollY, headerState: HeaderScroll.HIDE });
         }
 
