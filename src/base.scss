@@ -287,7 +287,7 @@ body {
         width: 100%;
 
         &__text {
-            width: 90%;
+            width: 80%;
         }
 
     }
@@ -319,11 +319,6 @@ body {
     color: white;
     font-size: 1.1rem;
     animation: heartbeat 1s infinite;
-
-    @media screen and (max-width: 768px) {
-        font-size: .7rem;
-    }
-
 }
 
 @keyframes heartbeat
@@ -352,4 +347,8 @@ body {
   {
     transform: scale( .75 );
   }
+}
+
+body.mobile-menu-open {
+    overflow: hidden;
 }

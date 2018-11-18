@@ -2,6 +2,7 @@ import * as React from "react";
 import Carousel from '../carousel/carousel';
 import About2 from '../info/about2';
 import Box from '../box/box';
+import { HeaderContext } from '../headerContext';
 
 
 interface HomeState {
@@ -23,7 +24,9 @@ export default class Home extends React.Component<HomeProps, HomeState> {
     render() {
         return (
             <>
-                <Carousel />
+                <HeaderContext.Consumer>
+                    {headerContext => <Carousel isMobileMenuOpen={headerContext.isOpen} />}
+                </HeaderContext.Consumer>
                 <About2 />
             </>
         );

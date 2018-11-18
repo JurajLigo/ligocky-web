@@ -10,7 +10,7 @@ interface CarouselState {
 }
 
 interface CarouselProps {
-
+    isMobileMenuOpen: boolean;
 }
 
 export default class Carousel extends React.Component<CarouselProps, CarouselState> {
@@ -38,7 +38,8 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
     }
 
     render() {
-        console.log('landspcae ', this.state.isLandscape);
+
+        console.log('render carousel ', this.props.isMobileMenuOpen);
         return (
             <div className="carousel__wrapper">
                 {this.state.isLandscape &&
@@ -64,7 +65,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
                 </ReactSwipe>
                 }
                 <div>
-                    <div className="carousel__arrow carousel__arrow--right" onClick={this.prev}><FontAwesomeIcon icon="chevron-circle-right" size="2x" /> </div>
+                    <div className="carousel__arrow carousel__arrow--right" onClick={this.next}><FontAwesomeIcon icon="chevron-circle-right" size="2x" /> </div>
                     <div className="carousel__arrow carousel__arrow--left" onClick={this.prev}><FontAwesomeIcon icon="chevron-circle-left" size="2x" /> </div>
                     <ArrowDown />
                     <div className="title">

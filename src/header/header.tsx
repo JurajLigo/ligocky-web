@@ -6,11 +6,11 @@ import './header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import HamburgerMenu from 'react-hamburger-menu';
 import '../../dist/style.css';
+import { HeaderContext } from '../headerContext';
 
 const classNames = require('classnames');
 
 interface HeaderState {
-    isMenuOpen: boolean;
     scrollY: number;
     headerState: HeaderScroll;
 }
@@ -22,14 +22,13 @@ enum HeaderScroll {
 }
 
 interface HeaderProps {
-
 }
 
 export default class Header extends React.Component<HeaderProps, HeaderState> {
 
     constructor(props: HeaderProps) {
         super(props);
-        this.state = { isMenuOpen: false, headerState: HeaderScroll.INIT, scrollY: 0 };
+        this.state = { headerState: HeaderScroll.INIT, scrollY: 0 };
     }
 
     componentDidMount() {
@@ -54,16 +53,12 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         }
     }
 
-    handleMenuClick = () => {
-        this.setState({
-            isMenuOpen: !this.state.isMenuOpen
-        });
-    }
-
     render() {
 
+        console.log('render header');
+
         const mobileMenuStyle: any = {
-            right: !this.state.isMenuOpen ? `-${window.innerWidth}px` : 0,
+            right: false ? `-${window.innerWidth}px` : 0,
         };
 
         const headerCls: any = classNames({
@@ -100,26 +95,33 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
                     </ul>
                 </nav>
 
-                <nav className="header__nav-mobile">
-                    <HamburgerMenu
-                        isOpen={this.state.isMenuOpen}
-                        menuClicked={this.handleMenuClick}
-                        width={36}  
-                        height={20}
-                        strokeWidth={5}
-                        rotate={0}
-                        color='white'
-                        borderRadius={10}
-                        animationDuration={0.5}
-                    />
-                </nav>
-                <div className="header__mobile-menu" style={mobileMenuStyle}>
-                    <ul>
-                        <li className="record"><a href="#">HOME</a></li>
-                        <li className="record"><a href="#">WORLD CUP</a></li>
-                        <li className="record record--last"><a href="#" className="last">MICHAEL JORDAN</a></li>
-                    </ul>
-                </div>
+                <HeaderContext.Consumer>
+                {headerContext => 
+                <>
+                    <nav className="header__nav-mobile">
+                        <HamburgerMenu
+                            isOpen={headerContext.isOpen}
+                            menuClicked={headerContext.toggleMobileMenu}
+                            width={36}
+                            height={20}
+                            strokeWidth={5}
+                            rotate={0}
+                            color='white'
+                            borderRadius={10}
+                            animationDuration={0.5}
+                        />
+                    </nav>
+                    <div className="header__mobile-menu" style={{
+            right: !headerContext.isOpen ? `-${window.innerWidth}px` : 0,
+        }}>
+                        <ul>
+                            <li className="record"><a href="#">{headerContext.isOpen}</a></li>
+                            <li className="record"><a href="#">WORLD CUP</a></li>
+                            <li className="record record--last"><a href="#" className="last">MICHAEL JORDAN</a></li>
+                        </ul>
+                    </div>
+                    </>}
+                </HeaderContext.Consumer>
             </header>
         );
     }
