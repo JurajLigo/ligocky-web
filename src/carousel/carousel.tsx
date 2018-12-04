@@ -38,8 +38,6 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
     }
 
     render() {
-
-        console.log('render carousel ', this.props.isMobileMenuOpen);
         return (
             <div className="carousel__wrapper">
                 {this.state.isLandscape &&
