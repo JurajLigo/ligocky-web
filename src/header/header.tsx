@@ -54,9 +54,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     }
 
     render() {
-
-        console.log('render header');
-
         const mobileMenuStyle: any = {
             right: false ? `-${window.innerWidth}px` : 0,
         };
@@ -96,31 +93,31 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
                 </nav>
 
                 <HeaderContext.Consumer>
-                {headerContext => 
-                <>
-                    <nav className="header__nav-mobile">
-                        <HamburgerMenu
-                            isOpen={headerContext.isOpen}
-                            menuClicked={headerContext.toggleMobileMenu}
-                            width={36}
-                            height={20}
-                            strokeWidth={5}
-                            rotate={0}
-                            color='white'
-                            borderRadius={10}
-                            animationDuration={0.5}
-                        />
-                    </nav>
-                    <div className="header__mobile-menu" style={{
-            right: !headerContext.isOpen ? `-${window.innerWidth}px` : 0,
-        }}>
-                        <ul>
-                            <li className="record"><a href="#">{headerContext.isOpen}</a></li>
-                            <li className="record"><a href="#">WORLD CUP</a></li>
-                            <li className="record record--last"><a href="#" className="last">MICHAEL JORDAN</a></li>
-                        </ul>
-                    </div>
-                    </>}
+                    {headerContext =>
+                        <>
+                            <nav className="header__nav-mobile">
+                                <HamburgerMenu
+                                    isOpen={headerContext.isOpen}
+                                    menuClicked={headerContext.toggleMobileMenu}
+                                    width={36}
+                                    height={20}
+                                    strokeWidth={5}
+                                    rotate={0}
+                                    color='white'
+                                    borderRadius={10}
+                                    animationDuration={0.5}
+                                />
+                            </nav>
+                            <div className="header__mobile-menu" style={{
+                                right: !headerContext.isOpen ? `-${window.innerWidth}px` : 0,
+                            }}>
+                                <ul>
+                                    <li className="record"><NavLink exact={true} to=''><Flag name="GB" format="png" basePath="assets" pngSize={32} shiny={false} className="header__flag" />HOME</NavLink></li>
+                                    <li className="record"><NavLink  to='/travelstories'><Flag name="SK" format="png" basePath="assets" pngSize={32} shiny={false} className="header__flag" />CESTOVATEĽSKÉ PRÍHODY</NavLink></li>
+                                    <li className="record record--last"><NavLink to='/cv'><Flag name="GB" format="png" basePath="assets" pngSize={32} shiny={false} className="header__flag" />CV</NavLink></li>
+                                </ul>
+                            </div>
+                        </>}
                 </HeaderContext.Consumer>
             </header>
         );

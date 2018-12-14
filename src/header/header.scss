@@ -85,6 +85,14 @@
       }
   }
 
+  &__flag {
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-right: 4px;
+    border-radius: 15px;
+    opacity: 1;
+  }
+
   &__nav-mobile {
     z-index: 2;
 
@@ -110,7 +118,6 @@
         top: 30%; 
         position: relative;
         list-style-type: none;
-        text-align: center;
         padding: 0;
         margin: 0 auto;
         width: 80%;
@@ -134,20 +141,16 @@
         font-size: 1rem;
         color: white;
         text-decoration: none;
+        margin-left: 1rem;
   
         &:hover {
           color: $blue;
         }
       }
 
-  }
+      .header__flag {
+        margin-right: 1rem;
+      }
 
-
-  &__flag {
-    vertical-align: middle;
-    margin-top: -3px;
-    margin-right: 4px;
-    border-radius: 15px;
-    opacity: 1;
   }
 }
