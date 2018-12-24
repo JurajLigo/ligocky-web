@@ -112,9 +112,9 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
                                 right: !headerContext.isOpen ? `-${window.innerWidth}px` : 0,
                             }}>
                                 <ul>
-                                    <li className="record"><NavLink exact={true} to=''><Flag name="GB" format="png" basePath="assets" pngSize={32} shiny={false} className="header__flag" />HOME</NavLink></li>
-                                    <li className="record"><NavLink  to='/travelstories'><Flag name="SK" format="png" basePath="assets" pngSize={32} shiny={false} className="header__flag" />CESTOVATEĽSKÉ PRÍHODY</NavLink></li>
-                                    <li className="record record--last"><NavLink to='/cv'><Flag name="GB" format="png" basePath="assets" pngSize={32} shiny={false} className="header__flag" />CV</NavLink></li>
+                                    <li className="record"><NavLink exact={true} to='' onClick={headerContext.toggleMobileMenu}><Flag name="GB" format="png" basePath="assets" pngSize={32} shiny={false} className="header__flag" />HOME</NavLink></li>
+                                    <li className="record"><NavLink to='/travelstories' onClick={headerContext.toggleMobileMenu}><Flag name="SK" format="png" basePath="assets" pngSize={32} shiny={false} className="header__flag" />CESTOVATEĽSKÉ PRÍHODY</NavLink></li>
+                                    <li className="record record--last"><NavLink to='/cv' onClick={headerContext.toggleMobileMenu}><Flag name="GB" format="png" basePath="assets" pngSize={32} shiny={false} className="header__flag" />CV</NavLink></li>
                                 </ul>
                             </div>
                         </>}
