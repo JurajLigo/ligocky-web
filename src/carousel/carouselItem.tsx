@@ -10,7 +10,7 @@ interface CarouselItemProps {
 
 const classNames = require('classnames');
 
-export default function CarouselItem(props: CarouselItemProps) {
+export default function CarouselItem(props: CarouselItemProps): JSX.Element {
     
     let backgroundImgStyle: any = {
         'backgroundImage': `url("../../assets/carousel/${props.order}.jpg")`

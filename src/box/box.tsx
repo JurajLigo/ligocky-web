@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './box.scss';
 
-interface BoxState {
-}
-
 interface BoxProps {
     title: string;
     imagePath: string;
@@ -14,11 +11,7 @@ interface BoxProps {
     link: string;
 }
 
-export default class Box extends React.Component<BoxProps, BoxState> {
-
-    constructor(props: BoxProps) {
-        super(props);
-    }
+export default class Box extends React.Component<BoxProps> {
 
     render() {
 
