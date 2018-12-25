@@ -5,6 +5,8 @@ import './carousel.scss';
 import CarouselItem from './carouselItem';
 import ArrowDown from '../arrowDown';
 
+const classNames = require('classnames');
+
 interface CarouselState {
     isLandscape: boolean;
 }
@@ -38,6 +40,17 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
     }
 
     render() {
+        const arrowRightCls: any = classNames('carousel__arrow carousel__arrow--right', {
+            'carousel__arrow--z1': this.props.isMobileMenuOpen,
+            'carousel__arrow--z2': !this.props.isMobileMenuOpen
+        });
+
+        const arrowLeftCls: any = classNames('carousel__arrow carousel__arrow--left',{
+            'carousel__arrow--z1': this.props.isMobileMenuOpen,
+            'carousel__arrow--z2': !this.props.isMobileMenuOpen
+        });
+
+
         return (
             <div className="carousel__wrapper">
                 {this.state.isLandscape &&
@@ -63,8 +76,8 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
                 </ReactSwipe>
                 }
                 <div>
-                    <div className="carousel__arrow carousel__arrow--right" onClick={this.next}><FontAwesomeIcon icon="chevron-circle-right" size="2x" /> </div>
-                    <div className="carousel__arrow carousel__arrow--left" onClick={this.prev}><FontAwesomeIcon icon="chevron-circle-left" size="2x" /> </div>
+                    <div className={arrowRightCls} onClick={this.next}><FontAwesomeIcon icon="chevron-circle-right" size="2x" /> </div>
+                    <div className={arrowLeftCls} onClick={this.prev}><FontAwesomeIcon icon="chevron-circle-left" size="2x" /> </div>
                     <ArrowDown />
                     <div className="title">
                         <div className="title__text">I'M JURAJ LIGOCKY</div>
