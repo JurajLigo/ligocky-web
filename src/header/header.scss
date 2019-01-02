@@ -13,7 +13,7 @@
   position: absolute;
   width: 100%;
 
-  @media screen and (max-width: 768px) { 
+  @media screen and (max-width: 767px) {
     
     justify-content: space-between;
     background: none;
@@ -56,6 +56,7 @@
   &__nav-desktop {
     font-size: 1rem;
     margin-right:2rem;
+    display: none;
     
     li {
       display: inline-block;
@@ -64,8 +65,8 @@
     }
 
   
-    @media screen and (max-width: 768px) {
-      display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
     }
 
   }
@@ -95,9 +96,10 @@
 
   &__nav-mobile {
     z-index: 2;
+    display: none;
 
-    @media screen and (min-width: 769px) {
-      display: none;
+    @media screen and (max-width: 767px) {
+      display: block;
     }
   }
 
