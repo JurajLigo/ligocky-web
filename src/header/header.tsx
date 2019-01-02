@@ -54,10 +54,6 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
     }
 
     render() {
-        const mobileMenuStyle: any = {
-            right: false ? `-${window.innerWidth}px` : 0,
-        };
-
         const headerCls: any = classNames({
             'header': true,
             'header--show': this.state.headerState === HeaderScroll.SHOW,

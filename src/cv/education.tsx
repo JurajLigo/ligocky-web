@@ -1,6 +1,5 @@
-import * as React from "react";
-const VerticalTimeline = require('react-vertical-timeline-component').VerticalTimeline;
-const VerticalTimelineElement = require('react-vertical-timeline-component').VerticalTimelineElement;
+import * as React from 'react';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Education(): JSX.Element {
@@ -8,7 +7,7 @@ export default function Education(): JSX.Element {
         <div className="cv__education">
             <h1 className="section__title m-top--big m-bottom--zero">Education and courses</h1>
             <p className="section__subtitle m-top--zero m-bottom--big">My education and courses history</p>
-            <VerticalTimeline animate={false}>
+            <VerticalTimeline animate={true}>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     date="2009 - 2010, Bratislava"
