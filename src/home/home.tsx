@@ -1,22 +1,12 @@
-import * as React from "react";
+import * as React from 'react';
 import Carousel from '../carousel/carousel';
-import { About } from '../info/about';
-import { HeaderContext } from '../headerContext';
+import {About} from '../info/about';
+import {HeaderContext} from '../headerContext';
 
+export default class Home extends React.Component<undefined> {
 
-interface HomeState {
-
-}
-
-interface HomeProps {
-
-}
-
-export default class Home extends React.Component<HomeProps, HomeState> {
-
-    constructor(props: HomeProps) {
+    constructor(props: undefined) {
         super(props);
-        // TODO add to decorator
         window.scrollTo(0, 0);
     }
 
@@ -24,9 +14,9 @@ export default class Home extends React.Component<HomeProps, HomeState> {
         return (
             <>
                 <HeaderContext.Consumer>
-                    {headerContext => <Carousel isMobileMenuOpen={headerContext.isOpen} />}
+                    {headerContext => <Carousel isMobileMenuOpen={headerContext.isOpen}/>}
                 </HeaderContext.Consumer>
-                <About />
+                <About/>
             </>
         );
     }

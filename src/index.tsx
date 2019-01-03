@@ -1,15 +1,15 @@
 import * as React from "react";
-import { render } from 'react-dom';
-import { HashRouter, BrowserRouter } from 'react-router-dom'
+import {render} from 'react-dom';
+import {HashRouter, BrowserRouter} from 'react-router-dom'
 import Layout from "./layout";
-import { library } from '@fortawesome/fontawesome-svg-core'
+import {library} from '@fortawesome/fontawesome-svg-core'
 import {
     faChevronCircleLeft, faChevronCircleRight, faChevronCircleUp,
     faLaptop, faBasketballBall, faPlane, faDownload,
     faEnvelope, faMobileAlt, faLink, faFilePdf, faAngleDoubleDown, faBriefcase
-    ,faGraduationCap, faBicycle, faBookOpen, faDumbbell
+    , faGraduationCap, faBicycle, faBookOpen, faDumbbell
 } from '@fortawesome/free-solid-svg-icons'
-import { faFacebook, faReadme } from '@fortawesome/free-brands-svg-icons';
+import {faFacebook, faReadme} from '@fortawesome/free-brands-svg-icons';
 import './base.scss';
 
 library.add(faChevronCircleLeft);
@@ -33,5 +33,5 @@ library.add(faBookOpen);
 library.add(faDumbbell);
 
 render(<HashRouter>
-        < Layout />
-    </HashRouter>, document.getElementById('app')); 
+    < Layout/>
+</HashRouter>, document.getElementById('app'));

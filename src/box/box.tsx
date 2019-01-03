@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './box.scss';
@@ -14,8 +14,6 @@ interface BoxProps {
 export default class Box extends React.Component<BoxProps> {
 
     render() {
-
-
         let isTextFirst: boolean = this.props.isTextFirst;
 
         if(window.screen.availWidth < 768) {

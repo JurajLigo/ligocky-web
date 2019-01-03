@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 export default function Hobby(): JSX.Element {
     return (
@@ -9,31 +9,31 @@ export default function Hobby(): JSX.Element {
             <div className="cv__hobbies-wrapper">
                 <div className="cv__hobbies-box">
                     <div className="cv__hobbies-content">
-                        <FontAwesomeIcon icon="bicycle" size="3x" />
+                        <FontAwesomeIcon icon="bicycle" size="3x"/>
                         <h4 className="m-top--small m-bottom--zero">Biking in the city</h4>
                     </div>
                 </div>
                 <div className="cv__hobbies-box">
                     <div className="cv__hobbies-content">
-                        <FontAwesomeIcon icon="book-open" size="3x" />
+                        <FontAwesomeIcon icon="book-open" size="3x"/>
                         <h4 className="m-top--small m-bottom--zero">Reading books</h4>
                     </div>
                 </div>
                 <div className="cv__hobbies-box">
                     <div className="cv__hobbies-content">
-                        <FontAwesomeIcon icon="basketball-ball" size="3x" />
+                        <FontAwesomeIcon icon="basketball-ball" size="3x"/>
                         <h4 className="m-top--small m-bottom--zero">Basketball and streetball</h4>
                     </div>
                 </div>
                 <div className="cv__hobbies-box">
                     <div className="cv__hobbies-content">
-                        <FontAwesomeIcon icon="plane" size="3x" />
+                        <FontAwesomeIcon icon="plane" size="3x"/>
                         <h4 className="m-top--small m-bottom--zero">Traveling on my own</h4>
                     </div>
                 </div>
                 <div className="cv__hobbies-box">
                     <div className="cv__hobbies-content">
-                        <FontAwesomeIcon icon="dumbbell" size="3x" />
+                        <FontAwesomeIcon icon="dumbbell" size="3x"/>
                         <h4 className="m-top--small m-bottom--zero">Fitness</h4>
                     </div>
                 </div>

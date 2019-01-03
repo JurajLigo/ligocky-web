@@ -1,14 +1,13 @@
-import * as React from "react";
+import * as React from 'react';
 import { throttle } from 'underscore';
 import { NavLink } from 'react-router-dom';
-const Flag = require("react-flags");
-import './header.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import HamburgerMenu from 'react-hamburger-menu';
-import '../../dist/style.css';
 import { HeaderContext } from '../headerContext';
+import './header.scss';
+import '../../dist/style.css';
 
 const classNames = require('classnames');
+const Flag = require("react-flags");
 
 interface HeaderState {
     scrollY: number;
@@ -21,12 +20,9 @@ enum HeaderScroll {
     HIDE
 }
 
-interface HeaderProps {
-}
+export default class Header extends React.Component<undefined, HeaderState> {
 
-export default class Header extends React.Component<HeaderProps, HeaderState> {
-
-    constructor(props: HeaderProps) {
+    constructor(props: undefined) {
         super(props);
         this.state = { headerState: HeaderScroll.INIT, scrollY: 0 };
     }
