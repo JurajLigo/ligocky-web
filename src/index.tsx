@@ -1,7 +1,7 @@
-import * as React from "react";
+import * as React from 'react';
 import {render} from 'react-dom';
-import {HashRouter, BrowserRouter} from 'react-router-dom'
-import Layout from "./layout";
+import {HashRouter} from 'react-router-dom'
+import Layout from './layout';
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {
     faChevronCircleLeft, faChevronCircleRight, faChevronCircleUp,

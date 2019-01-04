@@ -7,27 +7,40 @@
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.3);
-  padding: .5rem;
-  transition: top .5s,box-shadow 1s, background 1s;
+  padding: 1rem;
+  transition: top .5s, box-shadow 1s, background 1s;
   z-index: 2;
   position: absolute;
   width: 100%;
 
   @media screen and (max-width: 767px) {
-    
+
     justify-content: space-between;
     background: none;
   }
 
+  &__logo {
+    color: white;
+    margin: .5rem;
+    font-size: 3rem;
+    font-family: 'Caveat Brush', cursive;
+    font-weight: 500;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+  }
+
   &__wrapper {
-    height: 75px;
+    height: 7.5rem;
   }
 
   &--init {
-  background: rgba(0, 0, 0, 0.3);
-  top: 0;
-  position: fixed;
-  width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    position: fixed;
+    width: 100%;
   }
 
   &--show {
@@ -35,7 +48,7 @@
     background: $blue;
     position: fixed;
     width: 100%;
-    box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,.3);
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, .3);
   }
 
   &--hide {
@@ -44,27 +57,19 @@
     top: -7.8rem;
     position: fixed;
   }
-  
-  &__firstname {
-      color: white;
-  }
 
-  &__lastname {
-      color: $blue;
-  }
-  
   &__nav-desktop {
     font-size: 1rem;
-    margin-right:2rem;
+    margin-right: 2rem;
     display: none;
-    
+
     li {
       display: inline-block;
       padding-right: 1rem;
       padding-left: 1rem;
     }
 
-  
+
     @media screen and (min-width: 768px) {
       display: block;
     }
@@ -79,11 +84,12 @@
 
     color: white;
     text-decoration: none;
-    padding: 1rem;
-    
-      &--blue {
-        color: white;
-      }
+    padding: 1.4rem;
+    font-size: 1.5em;
+
+    &--blue {
+      color: white;
+    }
   }
 
   &__flag {
@@ -106,7 +112,7 @@
   &__mobile-menu {
     width: 100%;
     background: $blue;
-    position:absolute;
+    position: absolute;
     top: 0;
     z-index: 1;
     height: 100vh;
@@ -116,43 +122,52 @@
       display: none;
     }
 
-      ul {
-        top: 30%; 
-        position: relative;
-        list-style-type: none;
-        padding: 0;
-        margin: 0 auto;
-        width: 80%;
-      }
+    ul {
+      top: 30%;
+      position: relative;
+      list-style-type: none;
+      padding: 0;
+      margin: 0 auto;
+      width: 80%;
+    }
 
-      .record {
-        padding-top: 2rem;  
-        padding-bottom: 2rem;
-        border-top: 1px solid white; 
+    .record {
+      font-size: 2rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      border-top: 1px solid white;
 
-        &--last {
-          border-bottom: 1px solid white;
-        }
+      &--last {
+        border-bottom: 1px solid white;
       }
+    }
 
-      .m-right {
-        margin-right: 1.2rem;
-      }
+    .m-right {
+      margin-right: 1.2rem;
+    }
 
-      a {
-        font-size: 1rem;
-        color: white;
-        text-decoration: none;
-        margin-left: 1rem;
-  
-        &:hover {
-          color: $blue;
-        }
-      }
+    a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
 
-      .header__flag {
-        margin-right: 1rem;
+      &:hover {
+        color: $blue;
       }
+    }
+
+    .header__flag {
+      margin-right: 1rem;
+    }
+
+    .long-text {
+      display: inline-block;
+      width: 50%;
+    }
+
+    .long-image {
+      margin-top: -2.7rem;
+    }
 
   }
 }

@@ -98,7 +98,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
                                                                                        size="2x"/></div>
                     <ArrowDown/>
                     <div className="title">
-                        <div className="title__text">I'M JURAJ LIGOCKY</div>
+                        <h1 className="title__text">I'M JURAJ LIGOCKY</h1>
                     </div>
                 </div>
 

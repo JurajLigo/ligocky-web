@@ -1,5 +1,9 @@
 @import "./constants";
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: "Roboto", sans-serif !important;
     margin: 0;
@@ -33,47 +37,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
-  }
-
-.main-heading { 
-    color: $blue;
-    margin: .5rem;
-    font-size: 2rem; 
-    font-family: 'Caveat Brush', cursive;   
-    //font-family: 'Oswald', sans-serif;
-    //font-family: 'Karla', sans-serif;
-    //font-family: 'Lora', serif;
-    //font-family: 'Arvo', serif;
-    //font-family: 'Ubuntu', sans-serif;
-    //font-family: 'Roboto Slab', serif;
-    font-weight: 500;
-
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-
-    &--center {
-        text-align:center;
-    }
-
-    &--margin {
-        margin: 2rem;
-    }
-
-    &--margin-lg {
-        margin-top: 3rem;
-        margin-bottom: 2rem;
-    }
-
-    &--border {
-        border-top: 1px solid $lightgray;
-        border-bottom: 1px solid $lightgray;
-        padding: 1rem;
-        max-width: 1170px;
-        text-align: center;
-        margin-left: 2em;
-        margin-right: 2em;
-    }
   }
 
 .up {
@@ -244,10 +207,11 @@ body {
 }
 
 .link {
+    cursor: pointer;
     display: inline-block;
     color: white;
     background-color: #ff4081;
-    padding: 1rem;
+    padding: 1.6rem;
     text-align: center;
     border-radius: .5rem; 
     text-decoration: none;
