@@ -28,8 +28,9 @@ export default class Box extends React.Component<BoxProps> {
                         <img className="box__picture" src={this.props.imagePath} />
                     </div>
                     <div className="box__col">
-                        {this.props.text}
-                        <p className="m-top--big">
+                        <p className="box__text">{this.props.text}</p>
+                        <div>Havana, 17.2. 2018</div>
+                        <p>
                         <Link to={this.props.link} className="link"><FontAwesomeIcon icon={['fab', 'readme']} size="lg" className="m-right--small" />Čítať viac</Link>
                         </p>
                     </div>
@@ -41,8 +42,9 @@ export default class Box extends React.Component<BoxProps> {
                     </div>
                     <div className="box__col">
                         <h2 className="box__title">{this.props.title}</h2>
-                        {this.props.text}
-                        <p className="m-top--big">
+                        <div>Havana, 17.2. 2018</div>
+                        <p className="box__text">{this.props.text}
+                        <p>
                             <Link to={this.props.link} className="link"><FontAwesomeIcon icon={['fab', 'readme']} size="lg" className="m-right--small" />Čítať viac</Link>
                         </p>
                     </div>

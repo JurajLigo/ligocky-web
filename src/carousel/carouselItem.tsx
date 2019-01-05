@@ -24,12 +24,8 @@ export default function CarouselItem(props: CarouselItemProps): JSX.Element {
         };
     }
 
-    const carouselItemCls: any = classNames({
-        'carousel__item': true
-    });
-
     return (
-        <div className={carouselItemCls} style={backgroundImgStyle}>
+        <div className="carousel__item" style={backgroundImgStyle}>
             <div className="carousel__description">
                 {props.description}
             </div>
