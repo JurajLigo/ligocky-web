@@ -22,8 +22,8 @@ export default class TravelStoryContainer extends React.Component<TravelStoryCon
             <>
                 <Hero imagePath="../../assets/travelStory/travel_story.jpg" mobileImagePath="../../assets/travelStory/travel_story_mobile.jpg" mobilePortraitImagePath="../../assets/travelStory/travel_story_mobile_portrait.jpg" title="Cestovateľské príhody" />
                 <div className="box__wrapper">
-                    <h1 className="section__title m-top--big m-bottom--zero">Príhody</h1>
-                    <p className="section__subtitle m-top--zero m-bottom--big">Zbierka zaujímavých a netradičných príhod z rôzneho súdka, ktoré som nadobudal počas môjho cestovania svetom na vlastnú päsť</p>
+                    <h1 className="section__title">Čo tu nájdem ?</h1>
+                    <p className="section__subtitle">Zbierka zaujímavých a netradičných príhod z rôzneho súdka, ktoré som nadobudal počas môjho cestovania svetom na vlastnú päsť</p>
                     <Box 
                         isTextFirst={false} 
                         imagePath="../../assets/travelStory/havana/havana_mobile.jpg"

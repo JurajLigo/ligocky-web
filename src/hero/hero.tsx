@@ -42,7 +42,7 @@ export default class Hero extends React.Component<HeroProps, HeroState> {
 
         return (
             <div className="hero" style={backgroundImgStyle}>
-                <div className="title title--small">{this.props.title}</div>
+                <h1 className="title title--small">{this.props.title}</h1>
                 <ArrowDown/>
             </div>
         );

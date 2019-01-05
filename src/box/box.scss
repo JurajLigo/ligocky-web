@@ -11,10 +11,11 @@
   }
   }
 
-  &__article-title {
+  &__title {
     color: #ff4081; 
     font-weight: 200;
     margin: 0;
+    font-size: 2rem;
     margin-bottom: 2rem;
   }
 
@@ -29,6 +30,7 @@
 
   &__col {
     width: 50%;
+    font-size: 1.6rem;
     box-sizing: border-box;
     padding: 1rem;
     align-self: center;

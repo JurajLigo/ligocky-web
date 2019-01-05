@@ -97,9 +97,9 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
                     <div className={arrowLeftCls} onClick={this.prev}><FontAwesomeIcon icon="chevron-circle-left"
                                                                                        size="2x"/></div>
                     <ArrowDown/>
-                    <div className="title">
-                        <h1 className="title__text">I'M JURAJ LIGOCKY</h1>
-                    </div>
+                    <h1 className="title">
+                        I'M JURAJ LIGOCKY
+                    </h1>
                 </div>
 
             </div>

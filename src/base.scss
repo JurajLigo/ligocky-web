@@ -1,318 +1,153 @@
 @import "./constants";
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: "Roboto", sans-serif !important;
-    margin: 0;
-    height: 100%;
-    padding: 0;
+  font-family: "Roboto", sans-serif !important;
+  margin: 0;
+  height: 100%;
+  padding: 0;
+
+  &.mobile-menu-open {
+    overflow: hidden;
+  }
 }
 
+
 .page {
-    position: relative;
-    overflow-x: hidden;
+  position: relative;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 768px) {
-    
-    /* width */
-::-webkit-scrollbar {
+
+  /* width */
+  ::-webkit-scrollbar {
     width: .6rem;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: $lightgray;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: $gray; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-}
   }
 
-.up {
-    color: $blue;
-}  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $lightgray;
+  }
 
-.m {
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $gray;
+  }
 
-    &-right {
-
-        &--zero {
-            margin-right: 0 !important;
-        }
-        
-        &--small {
-            margin-right: $small;
-        }
-
-        &--medium {
-            margin-right: $medium;
-        }
-
-        &--big {
-            margin-right: $big;
-        }
-    }
-
-    &-left {
-
-        &--zero {
-            margin-left: 0 !important;
-        }
-        
-        &--small {
-            margin-left: $small;
-        }
-
-        &--medium {
-            margin-left: $medium;
-        }
-
-        &--big {
-            margin-left: $big;
-        }
-    }
-
-    &-top {
-
-        &--zero {
-            margin-top: 0 !important;
-        }
-
-        &--small {
-            margin-top: $small;
-        }
-
-        &--medium {
-            margin-top: $medium;
-        }
-
-        &--big {
-            margin-top: $big;
-        }
-    }
-
-    &-bottom {
-
-        &--zero {
-            margin-bottom: 0 !important;
-        }
-
-        &--small {
-            margin-bottom: $small;
-        }
-
-        &--medium {
-            margin-bottom: $medium;
-        }
-
-        &--big {
-            margin-bottom: $big;
-        }
-    }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 
-.p {
-
-    &-right {
-
-        &--zero {
-            padding: 0 !important;
-        }
-        
-        &--small {
-            padding-right: $small;
-        }
-
-        &--medium {
-            padding-right: $medium;
-        }
-
-        &--big {
-            padding-right: $big;
-        }
-    }
-
-    &-left {
-
-        &--zero {
-            padding-left: 0 !important;
-        }
-        
-        &--small {
-            padding-left: $small;
-        }
-
-        &--medium {
-            padding-left: $medium;
-        }
-
-        &--big {
-            padding-left: $big;
-        }
-    }
-
-    &-top {
-
-        &--zero {
-            padding-top: 0 !important;
-        }
-
-        &--small {
-            padding-top: $small;
-        }
-
-        &--medium {
-            padding-top: $medium;
-        }
-
-        &--big {
-            padding-top: $big;
-        }
-    }
-
-    &-bottom {
-
-        &--zero {
-            padding-bottom: 0 !important;
-        }
-
-        &--small {
-            padding-bottom: $small;
-        }
-
-        &--medium {
-            padding-bottom: $medium;
-        }
-
-        &--big {
-            padding-bottom: $big;
-        }
-    }
+.up {
+  color: $blue;
 }
 
 .max-width {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .link {
-    cursor: pointer;
-    display: inline-block;
-    color: white;
-    background-color: #ff4081;
-    padding: 1.6rem;
-    text-align: center;
-    border-radius: .5rem; 
-    text-decoration: none;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  background-color: #ff4081;
+  padding: 1.6rem;
+  text-align: center;
+  border-radius: .5rem;
+  text-decoration: none;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 
-    &--blue {
-        background: rgb(97, 129, 182);
-    }
+  &--blue {
+    background: rgb(97, 129, 182);
+  }
 }
 
 .title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 3.6rem;
-    font-weight: 700; 
-    text-align: center;
-    padding: 3rem 2.5rem;
-    width: 50%;
-    border: 1px solid #fff;
-    z-index: 1;
-    background: rgba(0,0,0,.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  padding: 3rem 3rem;
+  width: 50%;
+  font-size: 5rem;
+  border: 1px solid #fff;
+  z-index: 1;
+  background: rgba(0, 0, 0, .3);
+  margin: 0 auto;
+
+  &--small {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
 
     &__text {
-        width: 100%;
-        margin: 0 auto;
+      width: 80%;
     }
 
-    &--small {
-        font-size: 2.5rem;
-    }
-
-    @media screen and (max-width: 768px) {
-        font-size: 2.2rem;
-        width: 100%;
-
-        &__text {
-            width: 80%;
-        }
-
-    }
+  }
 }
 
 .section {
 
-    &__title {
-        text-align: center;
-        font-weight: 400;
-        color: #ff4081;
-    }
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    color: $pink;
+    margin-bottom: .6rem;
+  }
 
-    &__subtitle {
-        text-align: center;
-        color: $gray;  
-    }
+  &__subtitle {
+    margin-top: 0;
+    font-size: 1.6rem;
+    text-align: center;
+    color: $gray;
+  }
 }
 
 .active-link {
-    border: 1px solid white;
-    border-radius: .5rem;
+  border: 1px solid white;
+  border-radius: .5rem;
 }
 
 .arrow-down {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    color: white;
-    font-size: 1.1rem;
-    animation: heartbeat 1s infinite;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  color: white;
+  font-size: 1.1rem;
+  animation: heartbeat 1s infinite;
 }
 
-@keyframes heartbeat
-{
-  0%
-  {
-    transform: scale( .75 );
+@keyframes heartbeat {
+  0% {
+    transform: scale(.75);
   }
-  20%
-  {
-    transform: scale( 1 );
+  20% {
+    transform: scale(1);
   }
-  40%
-  {
-    transform: scale( .75 );
+  40% {
+    transform: scale(.75);
   }
-  60%
-  {
-    transform: scale( 1 );
+  60% {
+    transform: scale(1);
   }
-  80%
-  {
-    transform: scale( .75 );
+  80% {
+    transform: scale(.75);
   }
-  100%
-  {
-    transform: scale( .75 );
+  100% {
+    transform: scale(.75);
   }
-}
-
-body.mobile-menu-open {
-    overflow: hidden;
 }

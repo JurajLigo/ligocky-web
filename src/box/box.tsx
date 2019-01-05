@@ -24,7 +24,7 @@ export default class Box extends React.Component<BoxProps> {
             <div className="box__content max-width">
                 {isTextFirst && <>
                     <div className="box__col">
-                    <h3 className="box__article-title">{this.props.title}</h3>
+                    <h2 className="box__title">{this.props.title}</h2>
                         <img className="box__picture" src={this.props.imagePath} />
                     </div>
                     <div className="box__col">
@@ -40,7 +40,7 @@ export default class Box extends React.Component<BoxProps> {
                         <img className="box__picture" src={this.props.imagePath} />
                     </div>
                     <div className="box__col">
-                        <h3 className="box__article-title">{this.props.title}</h3>
+                        <h2 className="box__title">{this.props.title}</h2>
                         {this.props.text}
                         <p className="m-top--big">
                             <Link to={this.props.link} className="link"><FontAwesomeIcon icon={['fab', 'readme']} size="lg" className="m-right--small" />Čítať viac</Link>
