@@ -24,21 +24,21 @@ export default class Box extends React.Component<BoxProps> {
             <div className="box__content max-width">
                 {isTextFirst && <>
                     <div className="box__col">
-                        <h2 className="box__title">{this.props.title}</h2>
                         <img className="box__picture" src={this.props.imagePath}/>
-                    </div>
-                    <div className="box__col">
-                        <p className="box__text">{this.props.text}</p>
-                        <div>
+                        <h2 className="box__title">{this.props.title}</h2>
+                        <div className="box__description-wrapper">
                             <span className="box__place">
                                 <FontAwesomeIcon icon="map-marker-alt" size="1x" className="icon"/>
                                 Havana</span>
                             <span className="box__time"><FontAwesomeIcon icon="clock" size="1x" className="icon"/>február 2018</span>
                         </div>
+                    </div>
+                    <div className="box__col">
+                        <p className="box__text">{this.props.text}</p>
                         <p>
                             <Link to={this.props.link} className="link"><FontAwesomeIcon icon={['fab', 'readme']}
                                                                                          size="lg"
-                                                                                         className="m-right--small"/>Čítať
+                                                                                         className="icon"/>Čítať
                                 viac</Link>
                         </p>
                     </div>
@@ -50,7 +50,7 @@ export default class Box extends React.Component<BoxProps> {
                     </div>
                     <div className="box__col">
                         <h2 className="box__title">{this.props.title}</h2>
-                        <div>
+                        <div className="box__description-wrapper">
                             <span className="box__place">
                                 <FontAwesomeIcon icon="map-marker-alt" size="1x" className="icon"/>
                                 Havana</span>
