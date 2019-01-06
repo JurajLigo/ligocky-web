@@ -7,7 +7,7 @@ import {
     faChevronCircleLeft, faChevronCircleRight, faChevronCircleUp,
     faLaptop, faBasketballBall, faPlane, faDownload,
     faEnvelope, faMobileAlt, faLink, faFilePdf, faAngleDoubleDown, faBriefcase
-    , faGraduationCap, faBicycle, faBookOpen, faDumbbell
+    , faGraduationCap, faBicycle, faBookOpen, faDumbbell, faMapMarkerAlt, faClock
 } from '@fortawesome/free-solid-svg-icons'
 import {faFacebook, faReadme} from '@fortawesome/free-brands-svg-icons';
 import './base.scss';
@@ -31,6 +31,8 @@ library.add(faGraduationCap);
 library.add(faBicycle);
 library.add(faBookOpen);
 library.add(faDumbbell);
+library.add(faMapMarkerAlt);
+library.add(faClock);
 
 render(<HashRouter>
     < Layout/>

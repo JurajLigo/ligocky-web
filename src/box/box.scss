@@ -27,6 +27,16 @@
     border-bottom: 1px solid $lightgray;
   }
 
+  &__place {
+    font-style: italic;
+  }
+
+  &__time {
+    font-style: italic;
+    margin-left: 1.5rem;
+  }
+
+
   &__col {
     width: 50%;
     font-size: 1.6rem;
