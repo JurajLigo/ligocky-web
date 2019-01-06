@@ -1,7 +1,6 @@
 import * as React from "react";
-import ArrowDown from '../arrowDown';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-//import 'react-vertical-timeline-component/style.min.css';
+import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component';
+import Hero from '../hero/hero';
 import './travelStory.scss';
 
 export interface TravelStoryProps {
@@ -31,54 +30,44 @@ export default class TravelStory extends React.Component<TravelStoryProps, Trave
     constructor(props: TravelStoryProps) {
         super(props);
         window.scrollTo(0, 0);
-        this.state = {items: []}; 
+        this.state = {items: []};
     }
 
     componentDidMount() {
-        this.getTravelData(); 
-     }
+        this.getTravelData();
+    }
 
-     
-     private getTravelData = async() => {
-         let response: any = await fetch(this.props.jsonPath);
-         const data = await response.json();
-         this.setState({items: data});
-         return data;
-     }
+
+    private getTravelData = async () => {
+        let response: any = await fetch(this.props.jsonPath);
+        const data = await response.json();
+        this.setState({items: data});
+        return data;
+    }
 
     render() {
-
-        let backgroundImgStyle: any = {
-            'backgroundImage': `url(${this.props.coverImagePath})`
-        };
-
-        if(window.screen.availWidth < 768) {
-            backgroundImgStyle = {
-                'backgroundImage': `url(${this.props.coverMobileImagePath})`
-              };
-        } 
-        
-
         return (
             <div className="travel-story">
-                <div className="travel-story__cover" style={backgroundImgStyle}>
-                    <div className="title title--small">{this.props.subtitle}</div>
-                    <ArrowDown />
-                </div>
+                <Hero imagePath={this.props.coverImagePath}
+                      mobileImagePath={this.props.coverMobileImagePath}
+                      mobilePortraitImagePath={this.props.coverMobileImagePath}
+                      title={this.props.title}/>
                 <VerticalTimeline animate={false}>
                     {this.state.items && this.state.items.map((travelStoryItem: TravelStoryItem, index: number) => {
                         return <VerticalTimelineElement key={index}
-                            className="vertical-timeline-element--work"
-                            date={travelStoryItem.time}
-                            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}>
+                                                        className="vertical-timeline-element--work"
+                                                        date={travelStoryItem.time}
+                                                        iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}>
                             <p>
                                 {travelStoryItem.description}
 
                             </p>
-                            {travelStoryItem.imagePath && 
+                            {travelStoryItem.imagePath &&
                             <figure>
-                                <img src={travelStoryItem.imagePath} className="vertical-timeline__image" />
-                                <figcaption><small>{travelStoryItem.imageCaption}</small></figcaption>
+                                <img src={travelStoryItem.imagePath} className="vertical-timeline__image"/>
+                                <figcaption>
+                                    <small>{travelStoryItem.imageCaption}</small>
+                                </figcaption>
                             </figure>}
                         </VerticalTimelineElement>
                     })}

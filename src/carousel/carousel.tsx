@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactSwipe from 'react-swipe';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import CarouselItem from './carouselItem';
-import ArrowDown from '../arrowDown';
+import ArrowDown from '../arrowDown/arrowDown';
 import './carousel.scss';
 
 const classNames = require('classnames');

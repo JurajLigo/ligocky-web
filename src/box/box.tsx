@@ -43,7 +43,7 @@ export default class Box extends React.Component<BoxProps> {
                     <div className="box__col">
                         <h2 className="box__title">{this.props.title}</h2>
                         <div>Havana, 17.2. 2018</div>
-                        <p className="box__text">{this.props.text}
+                        <p className="box__text">{this.props.text}</p>
                         <p>
                             <Link to={this.props.link} className="link"><FontAwesomeIcon icon={['fab', 'readme']} size="lg" className="m-right--small" />Čítať viac</Link>
                         </p>

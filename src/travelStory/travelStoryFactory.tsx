@@ -3,7 +3,7 @@ import { Link, RouteComponentProps } from "react-router-dom";
 import TravelStory, { TravelStoryProps, TravelStoryItem } from './travelStory';
 import Box from '../box/box';
 import './travelStory.scss';
-import ArrowDown from '../arrowDown';
+import ArrowDown from '../arrowDown/arrowDown';
 
 
 export interface TravelStoryFactoryProps {

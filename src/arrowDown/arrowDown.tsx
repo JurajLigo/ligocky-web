@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import './arrowDown.scss';
 
 export default function ArrowDown(): JSX.Element {
     return (

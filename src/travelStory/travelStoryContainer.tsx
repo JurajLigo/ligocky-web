@@ -1,9 +1,7 @@
-import * as React from "react";
-import TravelStory, { TravelStoryProps, TravelStoryItem } from './travelStory';
+import * as React from 'react';
 import Box from '../box/box';
-import './travelStory.scss';
-import ArrowDown from '../arrowDown';
 import Hero from '../hero/hero';
+import './travelStory.scss';
 
 
 export interface TravelStoryContainerProps {

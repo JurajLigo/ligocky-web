@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ArrowDown from '../arrowDown';
+import ArrowDown from '../arrowDown/arrowDown';
 import './hero.scss';
 
 interface HeroProps {
@@ -42,7 +42,9 @@ export default class Hero extends React.Component<HeroProps, HeroState> {
 
         return (
             <div className="hero" style={backgroundImgStyle}>
-                <h1 className="title title--small">{this.props.title}</h1>
+                <div className="title__wrapper">
+                    <h1 className="title__text title__text--small">{this.props.title}</h1>
+                </div>
                 <ArrowDown/>
             </div>
         );
