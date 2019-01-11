@@ -79,12 +79,13 @@ export default class Header extends React.Component<undefined, HeaderState> {
                         <li><NavLink className={headerLinkCls} to='/travelstories' activeClassName="active-link"><Flag
                             name="SK" format="png" basePath="assets" pngSize={32} shiny={false}
                             className="header__flag"/>Cestovateľské príhody</NavLink></li>
-                        <li><NavLink className={headerLinkCls} to='/cv' activeClassName="active-link"><Flag name="GB"
-                                                                                                            format="png"
-                                                                                                            basePath="assets"
-                                                                                                            pngSize={32}
-                                                                                                            shiny={false}
-                                                                                                            className="header__flag"/>CV</NavLink>
+                        <li><NavLink className={headerLinkCls} to='/cv' activeClassName="active-link">
+                            <Flag name="GB"
+                                  format="png"
+                                  basePath="assets"
+                                  pngSize={32}
+                                  shiny={false}
+                                  className="header__flag"/>CV</NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -116,7 +117,8 @@ export default class Header extends React.Component<undefined, HeaderState> {
                                     <li className="record"><NavLink to='/travelstories'
                                                                     onClick={headerContext.toggleMobileMenu}><Flag
                                         name="SK" format="png" basePath="assets" pngSize={32} shiny={false}
-                                        className="header__flag long-image"/><span className="long-text">CESTOVATEĽSKÉ PRÍHODY</span></NavLink></li>
+                                        className="header__flag"/><span className="long-text">CESTOVATEĽSKÉ PRÍHODY</span></NavLink>
+                                    </li>
                                     <li className="record record--last"><NavLink to='/cv'
                                                                                  onClick={headerContext.toggleMobileMenu}><Flag
                                         name="GB" format="png" basePath="assets" pngSize={32} shiny={false}

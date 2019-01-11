@@ -21,7 +21,7 @@ body {
   overflow-x: hidden;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $mobile) {
 
   /* width */
   ::-webkit-scrollbar {
@@ -102,7 +102,7 @@ body {
       font-size: 3rem;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $mobile) {
       width: 75%;
       margin: 0 auto;
       font-size: 3.2rem;

@@ -29,7 +29,6 @@
     @media screen and (min-width: 768px) {
       display: none;
     }
-
   }
 
   &__wrapper {
@@ -59,9 +58,9 @@
   }
 
   &__nav-desktop {
-    font-size: 1rem;
     margin-right: 2rem;
     display: none;
+    margin-top: .6rem;
 
     li {
       display: inline-block;
@@ -85,7 +84,7 @@
     color: white;
     text-decoration: none;
     padding: 1.4rem;
-    font-size: 1.5em;
+    font-size: 1.6rem;
 
     &--blue {
       color: white;
@@ -93,10 +92,10 @@
   }
 
   &__flag {
-    vertical-align: middle;
-    margin-top: -3px;
-    margin-right: 4px;
-    border-radius: 15px;
+    vertical-align: top;
+    margin-top: -.5rem;
+    margin-right: .4rem;
+    border-radius: 1.5rem;
     opacity: 1;
   }
 
@@ -164,10 +163,5 @@
       display: inline-block;
       width: 50%;
     }
-
-    .long-image {
-      margin-top: -2.7rem;
-    }
-
   }
 }

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ArrowDown from '../arrowDown/arrowDown';
 import './hero.scss';
+import {MOBILE_WIDTH} from '../constants';
 
 interface HeroProps {
     title: string;
@@ -34,7 +35,7 @@ export default class Hero extends React.Component<HeroProps, HeroState> {
             'backgroundImage': `url(${this.props.imagePath})`
         };
 
-        if (window.screen.availWidth < 768) {
+        if (window.screen.availWidth < MOBILE_WIDTH) {
             backgroundImgStyle = {
                 'backgroundImage': `url(${this.state.isLandscape ? this.props.mobileImagePath : this.props.mobilePortraitImagePath})`
             };

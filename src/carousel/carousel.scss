@@ -1,16 +1,16 @@
 @import "./../constants";
 
 .carousel {
-  border: none !important; 
+  border: none !important;
 
   &__wrapper {
-    position: relative;  
+    position: relative;
   }
-  
+
   &__item {
     height: 100vh;
     width: 100%;
-    position: relative;  
+    position: relative;
     background: no-repeat center center scroll;
     background-size: cover;
     margin: 0 auto;
@@ -18,12 +18,12 @@
 
   &__description {
     position: absolute;
-    text-align: left;
     bottom: .7rem;
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    left: 1rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $mobile) {
       font-size: 1.6rem;
       text-align: center;
       left: 0;
@@ -35,11 +35,11 @@
   &__order {
     position: absolute;
     bottom: .7rem;
-    left: 1rem;
+    right: 1rem;
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $mobile) {
       font-size: 1.6rem;
       text-align: center;
       left: 0;
@@ -58,7 +58,7 @@
     @media screen and (max-width: 768px) {
       font-size: 1.2rem;
     }
-    
+
     &--left {
       transform: translate(50%, -50%);
       left: 1rem;

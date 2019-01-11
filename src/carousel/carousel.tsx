@@ -7,6 +7,9 @@ import './carousel.scss';
 
 const classNames = require('classnames');
 
+const DESKTOP_SLIDE_COUNT: number = 9;
+const MOBILE_SLIDE_COUNT: number = 5;
+
 interface CarouselState {
     isLandscape: boolean;
 }
@@ -56,39 +59,39 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
                 {this.state.isLandscape &&
                 <ReactSwipe ref={reactSwipe => this.reactSwipe = reactSwipe} className="carousel"
                             swipeOptions={{continuous: true, auto: 3000}}>
-                    <div><CarouselItem description={'Valletta (Malta), 2018'} totalCount={9} order={1}
-                                       isLandscape={true}/></div>
-                    <div><CarouselItem description={'Petra (Jorda), 2016'} totalCount={9} order={2} isLandscape={true}/>
-                    </div>
-                    <div><CarouselItem description={'Fuerteventura (Canary Island), 2016'} totalCount={9} order={3}
-                                       isLandscape={true}/></div>
-                    <div><CarouselItem description={'Angkor wat (Cambodia), 2016'} totalCount={9} order={4}
-                                       isLandscape={true}/></div>
-                    <div><CarouselItem description={'Arches National Park (USA), 2013'} totalCount={9} order={5}
-                                       isLandscape={true}/></div>
-                    <div><CarouselItem description={'Zion National Park (USA), 2013'} totalCount={9} order={6}
-                                       isLandscape={true}/></div>
-                    <div><CarouselItem description={'Death Valley (USA), 2013'} totalCount={9} order={7}
-                                       isLandscape={true}/></div>
-                    <div><CarouselItem description={'Yosemite (USA), 2013'} totalCount={9} order={8}
-                                       isLandscape={true}/></div>
-                    <div><CarouselItem description={'Legzira Beach (Morocco), 2012'} totalCount={9} order={9}
-                                       isLandscape={true}/></div>
+                  <div><CarouselItem description={'Valletta (Malta), 2018'} totalCount={DESKTOP_SLIDE_COUNT} order={1}
+                                     isLandscape={true}/></div>
+                  <div><CarouselItem description={'Petra (Jorda), 2016'} totalCount={DESKTOP_SLIDE_COUNT} order={2} isLandscape={true}/>
+                  </div>
+                  <div><CarouselItem description={'Fuerteventura (Canary Island), 2016'} totalCount={DESKTOP_SLIDE_COUNT} order={3}
+                                     isLandscape={true}/></div>
+                  <div><CarouselItem description={'Angkor wat (Cambodia), 2016'} totalCount={DESKTOP_SLIDE_COUNT} order={4}
+                                     isLandscape={true}/></div>
+                  <div><CarouselItem description={'Arches National Park (USA), 2013'} totalCount={DESKTOP_SLIDE_COUNT} order={5}
+                                     isLandscape={true}/></div>
+                  <div><CarouselItem description={'Zion National Park (USA), 2013'} totalCount={DESKTOP_SLIDE_COUNT} order={6}
+                                     isLandscape={true}/></div>
+                  <div><CarouselItem description={'Death Valley (USA), 2013'} totalCount={DESKTOP_SLIDE_COUNT} order={7}
+                                     isLandscape={true}/></div>
+                  <div><CarouselItem description={'Yosemite (USA), 2013'} totalCount={DESKTOP_SLIDE_COUNT} order={8}
+                                     isLandscape={true}/></div>
+                  <div><CarouselItem description={'Legzira Beach (Morocco), 2012'} totalCount={DESKTOP_SLIDE_COUNT} order={9}
+                                     isLandscape={true}/></div>
                 </ReactSwipe>
                 }
                 {!this.state.isLandscape &&
                 <ReactSwipe ref={reactSwipe => this.reactSwipe = reactSwipe} className="carousel"
                             swipeOptions={{continuous: true, auto: 3000}}>
-                    <div><CarouselItem description={'Fuerteventura (Canary Island), 2016'} totalCount={5} order={3}
-                                       isLandscape={false}/></div>
-                    <div><CarouselItem description={'Arches National Park (USA), 2013'} totalCount={5} order={5}
-                                       isLandscape={false}/></div>
-                    <div><CarouselItem description={'Death Valley (USA), 2013'} totalCount={5} order={7}
-                                       isLandscape={false}/></div>
-                    <div><CarouselItem description={'Yosemite (USA), 2013'} totalCount={5} order={8}
-                                       isLandscape={false}/></div>
-                    <div><CarouselItem description={'Legzira Beach (Morocco), 2012'} totalCount={5} order={9}
-                                       isLandscape={false}/></div>
+                  <div><CarouselItem description={'Fuerteventura (Canary Island), 2016'} totalCount={MOBILE_SLIDE_COUNT} order={1}
+                                     isLandscape={false}/></div>
+                  <div><CarouselItem description={'Arches National Park (USA), 2013'} totalCount={MOBILE_SLIDE_COUNT} order={2}
+                                     isLandscape={false}/></div>
+                  <div><CarouselItem description={'Death Valley (USA), 2013'} totalCount={MOBILE_SLIDE_COUNT} order={3}
+                                     isLandscape={false}/></div>
+                  <div><CarouselItem description={'Yosemite (USA), 2013'} totalCount={MOBILE_SLIDE_COUNT} order={4}
+                                     isLandscape={false}/></div>
+                  <div><CarouselItem description={'Legzira Beach (Morocco), 2012'} totalCount={MOBILE_SLIDE_COUNT} order={5}
+                                     isLandscape={false}/></div>
                 </ReactSwipe>
                 }
                 <div>

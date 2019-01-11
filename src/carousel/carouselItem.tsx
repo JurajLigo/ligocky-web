@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {MOBILE_WIDTH} from '../constants';
 
 const classNames = require('classnames');
 
@@ -15,7 +16,7 @@ export default function CarouselItem(props: CarouselItemProps): JSX.Element {
         'backgroundImage': `url("../../assets/carousel/${props.order}.jpg")`
     };
 
-    if (window.screen.availWidth < 768) {
+    if (window.screen.availWidth < MOBILE_WIDTH) {
 
         const portrait: string = !props.isLandscape ? 'portrait/' : '';
 
