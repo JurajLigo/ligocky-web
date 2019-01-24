@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component';
 import Hero from '../hero/hero';
 import './travelStory.scss';
@@ -8,6 +8,8 @@ export interface TravelStoryProps {
     coverMobileImagePath: string;
     coverPortraitMobileImagePath?: string;
     title: string;
+    place: string;
+    date: string;
     subtitle: string;
     jsonPath: string;
 }
@@ -17,7 +19,6 @@ export interface TravelStoryItem {
     imagePath?: string;
     imageCaption?: string;
     time: string;
-
 }
 
 export interface TravelStoryState {
@@ -25,7 +26,6 @@ export interface TravelStoryState {
 }
 
 export default class TravelStory extends React.Component<TravelStoryProps, TravelStoryState> {
-
 
     constructor(props: TravelStoryProps) {
         super(props);
@@ -36,7 +36,6 @@ export default class TravelStory extends React.Component<TravelStoryProps, Trave
     componentDidMount() {
         this.getTravelData();
     }
-
 
     private getTravelData = async () => {
         let response: any = await fetch(this.props.jsonPath);
@@ -51,7 +50,7 @@ export default class TravelStory extends React.Component<TravelStoryProps, Trave
                 <Hero imagePath={this.props.coverImagePath}
                       mobileImagePath={this.props.coverMobileImagePath}
                       mobilePortraitImagePath={this.props.coverMobileImagePath}
-                      title={this.props.title}/>
+                      title={this.props.subtitle}/>
                 <VerticalTimeline animate={false}>
                     {this.state.items && this.state.items.map((travelStoryItem: TravelStoryItem, index: number) => {
                         return <VerticalTimelineElement key={index}
@@ -65,9 +64,7 @@ export default class TravelStory extends React.Component<TravelStoryProps, Trave
                             {travelStoryItem.imagePath &&
                             <figure>
                                 <img src={travelStoryItem.imagePath} className="vertical-timeline__image"/>
-                                <figcaption>
-                                    <small>{travelStoryItem.imageCaption}</small>
-                                </figcaption>
+                                <figcaption>{travelStoryItem.imageCaption}</figcaption>
                             </figure>}
                         </VerticalTimelineElement>
                     })}

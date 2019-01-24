@@ -3,12 +3,10 @@ import Box from '../box/box';
 import Hero from '../hero/hero';
 import './travelStory.scss';
 
-
 export interface TravelStoryContainerProps {
 }
 
 export default class TravelStoryContainer extends React.Component<TravelStoryContainerProps, undefined> {
-
 
     constructor(props: TravelStoryContainerProps) {
         super(props);

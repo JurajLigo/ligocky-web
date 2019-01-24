@@ -1,9 +1,6 @@
-import * as React from "react";
-import { Link, RouteComponentProps } from "react-router-dom";
-import TravelStory, { TravelStoryProps, TravelStoryItem } from './travelStory';
-import Box from '../box/box';
-import './travelStory.scss';
-import ArrowDown from '../arrowDown/arrowDown';
+import * as React from 'react';
+import { RouteComponentProps } from 'react-router-dom';
+import TravelStory, { TravelStoryProps } from './travelStory';
 
 
 export interface TravelStoryFactoryProps {
@@ -29,6 +26,8 @@ export default class TravelStoryFactory extends React.Component<TravelStoryFacto
                         coverMobileImagePath: "../../assets/travelStory/morocco_goats/morocco_goats_mobile.jpg",
                         subtitle: "Marocké kozy na stromoch",
                         title: "Cestovateľské príhody",
+                        place: "Havana",
+                        date: "február 2018",
                         jsonPath: '../../assets/travelStory/morocco_goats/morocco_goats.json'
                     }
                     break;
@@ -39,6 +38,8 @@ export default class TravelStoryFactory extends React.Component<TravelStoryFacto
                         coverPortraitMobileImagePath: "../../assets/travelStory/havana/havana_mobile_portrait.jpg",
                         subtitle: "Interakcia s kubánskou políciou",
                         title: "Cestovateľské príhody",
+                        place: "Havana",
+                        date: "február 2018",
                         jsonPath: '../../assets/travelStory/havana/havana_police.json'
                     }
                     break;
@@ -48,6 +49,8 @@ export default class TravelStoryFactory extends React.Component<TravelStoryFacto
                         coverMobileImagePath: "../../assets/travelStory/santa_clara/santa_clara_mobile.jpg",
                         subtitle: "Gurmanský zážitok v Santa Clare",
                         title: "Cestovateľské príhody",
+                        place: "Havana",
+                        date: "február 2018",
                         jsonPath: '../../assets/travelStory/santa_clara/santa_clara_food.json'
                     }
                     break;
