@@ -44,151 +44,179 @@
         right: 50%;
         transform: translate(50%, -50%);
     }
-}
 
-.vertical-timeline {
-    margin-top: 0;
-    margin-bottom: 0;
+    .vertical-timeline {
+        margin-top: 0;
+        margin-bottom: 0;
 
-    .icon-align {
-        
-        &__work {
-            margin-left: -15px;
+        .icon-align {
+
+            &__work {
+                margin-left: -1.5rem;
+            }
+
+            &__education {
+                margin-left: -2rem;
+            }
         }
 
-        &__education {
-            margin-left: -20px;
-        }
-    }
-
-    &-element__logo {
-        padding: .7rem;
-        border-radius: .5rem;
-        height: 40px;
-        line-height: 40px;
-
-        img {
-            vertical-align: middle;
+        &-element-title {
+            font-size: 1.8rem;
         }
 
-        &--vub {
-            padding-left: 0;
+        &-element-subtitle {
+            font-size: 1.4rem;
+            font-style: italic;
+            font-weight: 200;
+        }
+
+        &-element-content {
+            font-size: 1.6rem;
+
+            p {
+                font-size: 1.6rem;
+            }
+        }
+
+        &-element-date {
+            font-size: 1.6rem !important;
+            top: 10px !important;
+        }
+
+        &-element-icon {
+
+            svg {
+                left: 60%;
+            }
+        }
+
+        &-element__logo {
+            padding: .7rem;
+            border-radius: .5rem;
+            height: 4rem;
+            line-height: 4rem;
 
             img {
-                height: 40px;
+                vertical-align: middle;
+            }
 
-                @media screen and (max-width: 767px) { 
+            &--vub {
+                padding-left: 0;
+
+                img {
+                    height: 4rem;
+
+                    @media screen and (max-width: 768px) {
                         max-width: 100%;
-                  }
+                    }
+                }
+            }
+
+            &--touch {
+                background-color: black;
+
+                img {
+                    height: 3rem;
+
+                    @media screen and (max-width: 768px) {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            &--erste {
+                background-color: #bce4fa;
+
+                img {
+                    margin-top: -.5rem;
+                    height: 3.5rem;
+
+                    @media screen and (max-width: 768px) {
+                        height: auto;
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            &--posam {
+                padding-left: 0;
+
+                img {
+                    height: 5rem;
+
+                    @media screen and (max-width: 768px) {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            &--stu {
+                background-color: #0092c2;
+
+                img {
+                    height: 4.5rem;
+
+                    @media screen and (max-width: 768px) {
+                        height: auto;
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            &--barcelona {
+                padding-left: 0;
+
+                img {
+                    height: 5rem;
+
+                    @media screen and (max-width: 768px) {
+                        height: auto;
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            &--topolcany {
+                padding-left: 0;
+
+                img {
+                    height: 4rem;
+
+                    @media screen and (max-width: 768px) {
+                        max-width: 100%;
+                    }
+                }
+
+                span {
+                    font-size: 1.2rem;
+                    margin-left: .5rem;
+                    color: #BF8A37;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 1rem;
+                    }
+                }
             }
         }
 
-        &--touch {
-            background-color: black;
-
-            img {
-                height: 30px;
-
-                @media screen and (max-width: 768px) { 
-                    max-width: 100%;
-              }
-            }
+        &-element-icon {
+            background: $blue !important;
         }
 
-        &--erste {
-            background-color: #bce4fa;
-
-            img {
-                margin-top: -5px;
-                height: 35px;
-
-                @media screen and (max-width: 768px) { 
-                    height: auto;
-                    max-width: 100%;
-              }
-            }
+        &-element-title {
+            margin-top: 1rem;
         }
 
-        &--posam {
-            //border: 1px solid $lightgray;
-            padding-left: 0;
-
-            img {
-              height: 50px;
-
-              @media screen and (max-width: 767px) { 
-                max-width: 100%;
-          }
-            }
+        ul.dash {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 1em;
         }
-
-        &--stu {
-            background-color: #0092c2;
-
-            img {
-                height: 45px;
-
-                @media screen and (max-width: 767px) { 
-                    height: auto;
-                    max-width: 100%;
-              }
-            }
+        ul.dash > li:before {
+            display: inline-block;
+            content: "-";
+            width: 1em;
+            margin-left: -1em;
         }
-
-        &--barcelona {
-            //border: 1px solid $lightgray;
-            padding-left: 0;
-
-            img {
-                height: 50px;
-
-                @media screen and (max-width: 768px) { 
-                    height: auto;
-                    max-width: 100%;
-              }
-            }
-        }
-
-        &--topolcany {
-            padding-left: 0;
-            
-            img {
-                height: 40px;
-
-                @media screen and (max-width: 768px) { 
-                    max-width: 100%;
-              }
-            }
-
-            span {
-                font-size: 1.2rem;
-                margin-left: .5rem;
-                color: #BF8A37;
-
-                @media screen and (max-width: 768px) { 
-                    font-size: 1rem;
-              }
-            }
-        }
-    }
-
-    &-element-icon {
-        background: $blue !important;
-    }
-
-    &-element-title {
-        margin-top: 1rem;
-    }
-
-    ul.dash {
-        list-style: none;
-        margin-left: 0;
-        padding-left: 1em;
-    }
-    ul.dash > li:before {
-        display: inline-block;
-        content: "-";
-        width: 1em;
-        margin-left: -1em;
     }
 }
