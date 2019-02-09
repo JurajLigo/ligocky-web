@@ -8,7 +8,7 @@ export default function Work(): JSX.Element {
         <div className="cv__work">
             <h1 className="section__title m-top--big m-bottom--zero">Work experiences</h1>
             <p className="section__subtitle m-top--zero m-bottom--big">My working history</p>
-            <VerticalTimeline animate={false}>
+            <VerticalTimeline animate={true}>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     date="2017 - today, Vienna"

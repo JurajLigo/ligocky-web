@@ -51,7 +51,7 @@ export default class TravelStory extends React.Component<TravelStoryProps, Trave
                       mobileImagePath={this.props.coverMobileImagePath}
                       mobilePortraitImagePath={this.props.coverMobileImagePath}
                       title={this.props.subtitle}/>
-                <VerticalTimeline animate={false}>
+                <VerticalTimeline animate={true}>
                     {this.state.items && this.state.items.map((travelStoryItem: TravelStoryItem, index: number) => {
                         return <VerticalTimelineElement key={index}
                                                         className="vertical-timeline-element--work"
