@@ -432,63 +432,24 @@
 }
 
 .travel-story {
+  background-color: $lightgray;
 
-  .vertical-timeline {
+  .vertical-timeline-element {
 
-    &--animate {
-      background-color: white;
+    p {
+      font-size: 1.6rem;
     }
 
-    &:before {
-      background: $lightgray;
-      margin-left: 9px;
-    }
-
-    &-element-content {
-      box-shadow: 0 0 0;
-      border-radius: .3rem;
-      background-color: $lightgray;
-      border-top: 3px solid $blue;
-
-      p {
-        font-size: 1.6rem;
-      }
-
-      @media screen and (min-width: 1170px) {
-
-        &::before {
-          border-left-color: $lightgray;
-        }
-      }
-
-      @media screen and (max-width: 1170px) {
-
-        &::before {
-          border-right-color: $lightgray;
-        }
-      }
-
-    }
-
-    &-element-date {
-      font-size: 1.7em !important;
-      top: 7px !important;
-      padding-left: 1rem;
-    }
-
-    &-element-icon {
+    &-icon {
       background: $blue !important;
-      height: 30px;
-      width: 30px;
-      margin-left: -7px;
-      top: 15px;
-      border: 3px solid $lightgray;
-      box-shadow: 0 0 0 0;
+    }
 
-      @media screen and (max-width: 1170px) {
-        margin-left: 11px;
-        top: 9px;
-      }
+
+    &__date {
+      position: absolute;
+      top: 2rem;
+      left: .7rem;
+      font-size: 1.7rem;
     }
 
     &__image {
@@ -511,16 +472,6 @@
       font-style: italic;
     }
   }
-
-  .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
-    border-right-color: $lightgray;
-    border-left-color: transparent;
-  }
-
-  .vertical-timeline--animate .vertical-timeline-element-content.is-hidden {
-    display: block !important;
-  }
-
 }
 
 
