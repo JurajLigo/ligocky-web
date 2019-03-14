@@ -2,7 +2,6 @@ import * as React from 'react';
 import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component';
 import Hero from '../hero/hero';
 import './travelStory.scss';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 export interface TravelStoryProps {
     coverImagePath: string;
@@ -20,6 +19,7 @@ export interface TravelStoryItem {
     imagePath?: string;
     imageCaption?: string;
     time: string;
+    day?: string;
 }
 
 export interface TravelStoryState {
@@ -43,6 +43,15 @@ export default class TravelStory extends React.Component<TravelStoryProps, Trave
         const data = await response.json();
         this.setState({items: data});
         return data;
+    };
+
+    private renderDateText(time: string, day: string): JSX.Element {
+        return (
+            <div className="vertical-timeline-element__time-wrapper">
+                <div className="vertical-timeline-element__time">{time}</div>
+                <div className="vertical-timeline-element__day">{day}</div>
+            </div>
+        );
     }
 
     render() {
@@ -56,7 +65,7 @@ export default class TravelStory extends React.Component<TravelStoryProps, Trave
                     {this.state.items && this.state.items.map((travelStoryItem: TravelStoryItem, index: number) => {
                         return <VerticalTimelineElement key={index}
                                                         className="vertical-timeline-element--work"
-                                                        icon={<span className="vertical-timeline-element__date">{travelStoryItem.time}</span>}
+                                                        icon={this.renderDateText(travelStoryItem.time, travelStoryItem.day)}
                                                         iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}>
                             <p>
                                 {travelStoryItem.description}
@@ -64,8 +73,8 @@ export default class TravelStory extends React.Component<TravelStoryProps, Trave
                             </p>
                             {travelStoryItem.imagePath &&
                             <figure>
-                                <img src={travelStoryItem.imagePath} className="vertical-timeline-element__image"/>
-                                <figcaption>{travelStoryItem.imageCaption}</figcaption>
+                              <img src={travelStoryItem.imagePath} className="vertical-timeline-element__image"/>
+                              <figcaption>{travelStoryItem.imageCaption}</figcaption>
                             </figure>}
                         </VerticalTimelineElement>
                     })}

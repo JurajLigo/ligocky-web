@@ -444,12 +444,23 @@
       background: $blue !important;
     }
 
-
-    &__date {
+    &__time-wrapper {
       position: absolute;
-      top: 2rem;
-      left: .7rem;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__time {
       font-size: 1.7rem;
+      text-align: center;
+    }
+
+    &__day {
+      border-top: 1px solid white;
+      padding-top: .3rem;
+      font-size: 1.2rem;
+      text-align: center;
     }
 
     &__image {
