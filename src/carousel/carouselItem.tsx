@@ -3,6 +3,8 @@ import {MOBILE_WIDTH} from '../constants';
 
 const classNames = require('classnames');
 
+const IMAGE_FORMAT = '.jpg';
+
 interface CarouselItemProps {
     description: string;
     order: number;
@@ -13,7 +15,7 @@ interface CarouselItemProps {
 export default function CarouselItem(props: CarouselItemProps): JSX.Element {
 
     let backgroundImgStyle: any = {
-        'backgroundImage': `url("../../assets/carousel/${props.order}.jpg")`
+        'backgroundImage': `url("../../assets/carousel/${props.order}${IMAGE_FORMAT}")`
     };
 
     if (window.screen.availWidth < MOBILE_WIDTH) {
@@ -21,7 +23,7 @@ export default function CarouselItem(props: CarouselItemProps): JSX.Element {
         const portrait: string = !props.isLandscape ? 'portrait/' : '';
 
         backgroundImgStyle = {
-            'backgroundImage': `url("../../assets/carousel/mobile/${portrait}${props.order}.jpg")`
+            'backgroundImage': `url("../../assets/carousel/mobile/${portrait}${props.order}${IMAGE_FORMAT}")`
         };
     }
 

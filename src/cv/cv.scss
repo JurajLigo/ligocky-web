@@ -456,9 +456,9 @@
         position: relative;
         background: $blue;
         border-radius: .5rem;
-        color: white;
-        width: 150px;
-        height: 150px;
+        color: $white;
+        width: 17rem;
+        height: 17rem;
         margin: 1rem;
         text-align: center;
         font-weight: 700;
@@ -590,9 +590,9 @@
                 background-color: #0092c2;
 
                 img {
-                    height: 4.5rem;
+                    max-width: 100%;
 
-                    @media screen and ($mobile) {
+                    @media screen and (max-width: $mobile) {
                         height: auto;
                         max-width: 100%;
                     }
@@ -605,7 +605,7 @@
                 img {
                     height: 5rem;
 
-                    @media screen and ($mobile) {
+                    @media screen and (max-width: $mobile) {
                         height: auto;
                         max-width: 100%;
                     }
@@ -618,7 +618,7 @@
                 img {
                     height: 4rem;
 
-                    @media screen and ($mobile) {
+                    @media screen and (max-width: $mobile) {
                         max-width: 100%;
                     }
                 }
@@ -628,7 +628,7 @@
                     margin-left: .5rem;
                     color: #BF8A37;
 
-                    @media screen and ($mobile) {
+                    @media screen and (max-width: $mobile) {
                         font-size: 1rem;
                     }
                 }

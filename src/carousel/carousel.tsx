@@ -8,7 +8,7 @@ import './carousel.scss';
 const classNames = require('classnames');
 
 const DESKTOP_SLIDE_COUNT: number = 9;
-const MOBILE_SLIDE_COUNT: number = 5;
+const MOBILE_SLIDE_COUNT: number = 3;
 
 interface CarouselState {
     isLandscape: boolean;
@@ -82,15 +82,19 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
                 {!this.state.isLandscape &&
                 <ReactSwipe ref={reactSwipe => this.reactSwipe = reactSwipe} className="carousel"
                             swipeOptions={{continuous: true, auto: 3000}}>
-                  <div><CarouselItem description={'Fuerteventura (Canary Island), 2016'} totalCount={MOBILE_SLIDE_COUNT} order={1}
+                  <div><CarouselItem description={'Arches National Park (USA), 2013'} totalCount={MOBILE_SLIDE_COUNT} order={1}
                                      isLandscape={false}/></div>
-                  <div><CarouselItem description={'Arches National Park (USA), 2013'} totalCount={MOBILE_SLIDE_COUNT} order={2}
+                  <div><CarouselItem description={'Death Valley (USA), 2013'} totalCount={MOBILE_SLIDE_COUNT} order={2}
                                      isLandscape={false}/></div>
-                  <div><CarouselItem description={'Death Valley (USA), 2013'} totalCount={MOBILE_SLIDE_COUNT} order={3}
+                  <div><CarouselItem description={'Legzira Beach (Morocco), 2012'} totalCount={MOBILE_SLIDE_COUNT} order={3}
                                      isLandscape={false}/></div>
-                  <div><CarouselItem description={'Yosemite (USA), 2013'} totalCount={MOBILE_SLIDE_COUNT} order={4}
+                  <div><CarouselItem description={'Legzira Beach (Morocco), 2012'} totalCount={MOBILE_SLIDE_COUNT} order={4}
                                      isLandscape={false}/></div>
                   <div><CarouselItem description={'Legzira Beach (Morocco), 2012'} totalCount={MOBILE_SLIDE_COUNT} order={5}
+                                     isLandscape={false}/></div>
+                  <div><CarouselItem description={'Legzira Beach (Morocco), 2012'} totalCount={MOBILE_SLIDE_COUNT} order={6}
+                                     isLandscape={false}/></div>
+                  <div><CarouselItem description={'Legzira Beach (Morocco), 2012'} totalCount={MOBILE_SLIDE_COUNT} order={7}
                                      isLandscape={false}/></div>
                 </ReactSwipe>
                 }

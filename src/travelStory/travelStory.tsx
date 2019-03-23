@@ -49,7 +49,7 @@ export default class TravelStory extends React.Component<TravelStoryProps, Trave
         return (
             <div className="vertical-timeline-element__time-wrapper">
                 <div className="vertical-timeline-element__time">{time}</div>
-                <div className="vertical-timeline-element__day">{day}</div>
+                {day && <div className="vertical-timeline-element__day">{day}</div>}
             </div>
         );
     }
