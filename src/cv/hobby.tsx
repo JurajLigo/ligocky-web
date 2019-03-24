@@ -33,6 +33,12 @@ export default function Hobby(): JSX.Element {
                 </div>
                 <div className="cv__hobbies-box">
                     <div className="cv__hobbies-content">
+                        <FontAwesomeIcon icon="umbrella-beach" size="3x"/>
+                        <h4 className="m-top--small m-bottom--zero">Enjoying summer time near the water</h4>
+                    </div>
+                </div>
+                <div className="cv__hobbies-box">
+                    <div className="cv__hobbies-content">
                         <FontAwesomeIcon icon="dumbbell" size="3x"/>
                         <h4 className="m-top--small m-bottom--zero">Fitness</h4>
                     </div>
