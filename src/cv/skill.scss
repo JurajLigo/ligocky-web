@@ -3,12 +3,13 @@
 .skill {
     margin-top: 2rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
     &__box {
         margin: 5rem;
-        flex: 1;
-        height: 20rem;
+        flex-grow: 1;
+        height: 100%;
         padding: 2rem 1rem;
         border-radius: 4px;
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
@@ -24,9 +25,18 @@
     }
 
     &__box-title {
+        text-decoration: underline;
 
         &--javascript {
-            color: yellow;
+            color: #fac552;
         }
+
+        &--java {
+            color: #52819F;
+        }
+    }
+
+    &__box-text {
+        font-size: 1.6rem;
     }
 }
