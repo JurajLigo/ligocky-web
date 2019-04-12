@@ -4,19 +4,25 @@
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 7rem;
 
     &__box {
-        margin: 5rem;
-        flex-grow: 1;
-        height: 100%;
+        width: 20%;
+        box-sizing: border-box;
+        margin: 4rem;
         padding: 2rem 1rem;
         border-radius: 4px;
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
         display: flex;
+        min-height: 35rem;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+
+        @media screen and (max-width: $mobile) {
+            width: 70%;
+        }
 
         img {
             border-radius: 50%;
@@ -25,6 +31,7 @@
     }
 
     &__box-title {
+        margin-top: 2rem;
         text-decoration: underline;
 
         &--javascript {
@@ -33,6 +40,33 @@
 
         &--java {
             color: #52819F;
+        }
+
+        &--other {
+            color: #D91404;
+        }
+    }
+
+    &__list {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    &__other {
+        position: relative;
+        background: #D91404;
+        width: 10rem;
+        height: 10rem;
+        color: white;
+        border-radius: 50%;
+
+        &:after {
+            content: '\2022 \2022 \2022';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
         }
     }
 
