@@ -54,6 +54,7 @@
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+    user-select: none;
 
     @media screen and (max-width: 768px) {
       font-size: 1.2rem;

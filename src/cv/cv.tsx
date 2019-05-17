@@ -5,6 +5,7 @@ import Hobby from './hobby';
 import Education from './education';
 import Work from './work';
 import Skill from './skill';
+import Language from './language';
 
 export default function Cv(): JSX.Element {
 
@@ -15,6 +16,7 @@ export default function Cv(): JSX.Element {
             <Work/>
             <Skill />
             <Education/>
+            <Language />
             <Hobby/>
         </div>
     );
